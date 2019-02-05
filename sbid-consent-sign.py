@@ -25,7 +25,7 @@ jwk_pub = findJWK(res)
 """
 # Prepare and encrypt the payload.
 payload = {
-    "login_hint": ["subject-198304062717"],
+    "login_hint": ["subject-yyyymmddnnnn"],
     "ui_locales": "sv",
     "scope": "openid profile signicat.sign",
     "signicat_signtext": "I confirm my purchase of broadband subscription Medium500.",
@@ -41,7 +41,7 @@ print("\nPayload: {}".format(payload))
 enc = encryptRequest(jwk_pub, payload)
 print("\nEncrypted payload: {}".format(enc))
 
-# STEP 1: Call authorize using method "sbid-inapp"
+# STEP 1: Call authorize using method "sbid-inapp-sign"
 headers1 = {'Accept': 'application/json'}
 url1 = ('https://preprod.signicat.com/oidc/authorize?request={}'.format(enc))
 r1 = requests.get(url1, headers=headers1)
