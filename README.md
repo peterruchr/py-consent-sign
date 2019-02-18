@@ -58,8 +58,8 @@ Once you have changed this variable, you can run it with ```python3 sbid-consent
 
 **Security Concerns**
 
-There are certain key concepts to keep in mind to be able to achive a good level of security when implementing OIDC authentication in-app.
-* [Proof Key for Code Exchange](https://tools.ietf.org/html/rfc7636): Signicat feels that a code interception attack is more if the flow us ran in a mobile device. As such it is **strongly recommended** that you implement this extension for OAuth/OIDC (supported by default on Signicat's OIDC clients). *The code examples in this repo already has PKCE implemented!*
+There are certain key concepts to keep in mind to be able to achive a good level of security when implementing consent signing.
+* [Proof Key for Code Exchange](https://tools.ietf.org/html/rfc7636): Signicat feels that a code interception attack is likely if the flow is ran in a mobile device. As such it is **strongly recommended** that you implement this extension for OAuth/OIDC (supported by default on Signicat's OIDC clients). *The code examples in this repo already has PKCE implemented!*
 * Unless you have specifically hardened security of your mobile application, you have to consider it somewhat unsafe. *OIDC tokens and client secrets provided by Signicat should not be stored in your app.*
 * As mentioned earlier step 4 & 5 **should not** be performed in-app. 
 * General hardening of mobile applications should also be considered. See for instance AppSamurai blog post: [12 Various Ways To Ensure Mobile Application Security](https://appsamurai.com/12-various-ways-to-ensure-mobile-application-security/)
