@@ -5,9 +5,8 @@
 
 These are **functional examples** of Consent Signature. It does not illustrate how to implement the solution in a production environment, it merely illustrates the API calls required to make the flow work as expected. It can be viewed as a jumping-off point for your app implementation.
 
-This example follows the documentation at (TODO).
+This example follows the documentation at https://developer.signicat.com/documentation/signing/signing-consent-signature/.
 
-PS: Documentation will be made available as soon as it's ready.
 
 **Dependencies**:
 

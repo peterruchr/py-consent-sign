@@ -93,8 +93,8 @@ print("\nLTV-SDO: {}... (Truncated {} Bytes)".format(res5[:100], len(res5)-100))
 
 # Saving XML to file.
 try:
-    with open("ltv-sdo.xml","w") as fp:
+    with open("result-sdo.xml","w") as fp:
         fp.write(res5)
-    print("\nWrote file : {} to current directory".format("ltv-sdo.xml"))
+    print("\nWrote file : {} to current directory".format("result-sdo.xml"))
 except:
     print("Couldn't write file, something went wrong...")

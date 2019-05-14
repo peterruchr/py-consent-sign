@@ -16,7 +16,7 @@ def encryptRequest(jwk_pub, payload):
     protected_header = {
         "alg": jwk_pub["alg"],
         "enc": "A256CBC-HS512",
-        "typ": "JWE",
+        "typ": "JWT",
         "kid": jwk_pub["kid"],
     }
     jwetoken = jwe.JWE(payload_bytes, recipient=public_key, protected=protected_header)
